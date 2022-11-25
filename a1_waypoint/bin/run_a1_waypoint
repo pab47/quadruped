@@ -1,0 +1,5 @@
+FOLDER=a1_waypoint
+reset
+#make -f makefile clean -C ../sample
+make -f makefile -C ../sample
+./$FOLDER ../model/a1.xml

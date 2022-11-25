@@ -1,0 +1,125 @@
+# sdfast -lc -ge -p sd primus_fast2.sd primus_fast2 
+#sdfast <lc, generate c files> <ge, generate everything> <-p , name of lib file> < name of sd file> < basename for _i, _s, _d files>
+
+
+gravity = 0? 0? -9.81? 
+
+body = trunk	 inb = $ground	 joint = free 
+mass = 4.714?
+inertia = 0.01694?	8.3874e-05?	0.00059778?	
+		8.3874e-05?	0.05658?	2.5133e-05?	
+		0.00059778?	2.5133e-05?	0.064814?	
+inbtojoint =0?	0?	0?	
+bodytojoint = -0.012728?		-0.0021855?		-0.00051489?		
+pin = 1? 0? 0? 
+pin = 0? 1? 0? 
+pin = 0? 0? 1? 
+
+body = FR_hip	 inb = trunk	 joint = pin 
+mass = 0.696?
+inertia = 0.00046925?	9.4092e-06?	-3.4207e-07?	
+		9.4092e-06?	0.00080749?	4.6605e-07?	
+		-3.4207e-07?	4.6605e-07?	0.00055293?	
+inbtojoint =0.17027?	-0.049186?	-0.00051489?	
+bodytojoint = 0.003311?		0.000635?		-3.1e-05?		
+pin = 1?	0?	0?	
+
+body = FR_thigh	 inb = FR_hip	 joint = pin 
+mass = 1.013?
+inertia = 0.0055291?	-4.825e-06?	0.00034387?	
+		-4.825e-06?	0.0051393?	-2.2447e-05?	
+		0.00034387?	-2.2447e-05?	0.0013678?	
+inbtojoint =0.003311?	-0.084415?	-3.1e-05?	
+bodytojoint = 0.003237?		-0.022327?		0.027326?		
+pin = 0?	1?	0?	
+
+body = FR_calf	 inb = FR_thigh	 joint = pin 
+mass = 0.226?
+inertia = 0.0033856?	0?	-0.00016743?	
+		0?	0.0034034?	0?	
+		-0.00016743?	0?	4.3851e-05?	
+inbtojoint =0.003237?	-0.022327?	-0.17267?	
+bodytojoint = -0.0047266?		0?		0.13198?		
+pin = 0?	1?	0?	
+
+body = FL_hip	 inb = trunk	 joint = pin 
+mass = 0.696?
+inertia = 0.00046925?	-9.4092e-06?	-3.4207e-07?	
+		-9.4092e-06?	0.00080749?	-4.6605e-07?	
+		-3.4207e-07?	-4.6605e-07?	0.00055293?	
+inbtojoint =0.17027?	0.044814?	-0.00051489?	
+bodytojoint = 0.003311?		-0.000635?		-3.1e-05?		
+pin = 1?	0?	0?	
+
+body = FL_thigh	 inb = FL_hip	 joint = pin 
+mass = 1.013?
+inertia = 0.0055291?	4.825e-06?	0.00034387?	
+		4.825e-06?	0.0051393?	2.2447e-05?	
+		0.00034387?	2.2447e-05?	0.0013678?	
+inbtojoint =0.003311?	0.084415?	-3.1e-05?	
+bodytojoint = 0.003237?		0.022327?		0.027326?		
+pin = 0?	1?	0?	
+
+body = FL_calf	 inb = FL_thigh	 joint = pin 
+mass = 0.226?
+inertia = 0.0033856?	0?	-0.00016743?	
+		0?	0.0034034?	0?	
+		-0.00016743?	0?	4.3851e-05?	
+inbtojoint =0.003237?	0.022327?	-0.17267?	
+bodytojoint = -0.0047266?		0?		0.13198?		
+pin = 0?	1?	0?	
+
+body = RR_hip	 inb = trunk	 joint = pin 
+mass = 0.696?
+inertia = 0.00046925?	-9.4092e-06?	3.4207e-07?	
+		-9.4092e-06?	0.00080749?	4.6605e-07?	
+		3.4207e-07?	4.6605e-07?	0.00055293?	
+inbtojoint =-0.19573?	-0.049186?	-0.00051489?	
+bodytojoint = -0.003311?		0.000635?		-3.1e-05?		
+pin = 1?	0?	0?	
+
+body = RR_thigh	 inb = RR_hip	 joint = pin 
+mass = 1.013?
+inertia = 0.0055291?	-4.825e-06?	0.00034387?	
+		-4.825e-06?	0.0051393?	-2.2447e-05?	
+		0.00034387?	-2.2447e-05?	0.0013678?	
+inbtojoint =-0.003311?	-0.084415?	-3.1e-05?	
+bodytojoint = 0.003237?		-0.022327?		0.027326?		
+pin = 0?	1?	0?	
+
+body = RR_calf	 inb = RR_thigh	 joint = pin 
+mass = 0.226?
+inertia = 0.0033856?	0?	-0.00016743?	
+		0?	0.0034034?	0?	
+		-0.00016743?	0?	4.3851e-05?	
+inbtojoint =0.003237?	-0.022327?	-0.17267?	
+bodytojoint = -0.0047266?		0?		0.13198?		
+pin = 0?	1?	0?	
+
+body = RL_hip	 inb = trunk	 joint = pin 
+mass = 0.696?
+inertia = 0.00046925?	9.4092e-06?	3.4207e-07?	
+		9.4092e-06?	0.00080749?	-4.6605e-07?	
+		3.4207e-07?	-4.6605e-07?	0.00055293?	
+inbtojoint =-0.19573?	0.044814?	-0.00051489?	
+bodytojoint = -0.003311?		-0.000635?		-3.1e-05?		
+pin = 1?	0?	0?	
+
+body = RL_thigh	 inb = RL_hip	 joint = pin 
+mass = 1.013?
+inertia = 0.0055291?	4.825e-06?	0.00034387?	
+		4.825e-06?	0.0051393?	2.2447e-05?	
+		0.00034387?	2.2447e-05?	0.0013678?	
+inbtojoint =-0.003311?	0.084415?	-3.1e-05?	
+bodytojoint = 0.003237?		0.022327?		0.027326?		
+pin = 0?	1?	0?	
+
+body = RL_calf	 inb = RL_thigh	 joint = pin 
+mass = 0.226?
+inertia = 0.0033856?	0?	-0.00016743?	
+		0?	0.0034034?	0?	
+		-0.00016743?	0?	4.3851e-05?	
+inbtojoint =0.003237?	0.022327?	-0.17267?	
+bodytojoint = -0.0047266?		0?		0.13198?		
+pin = 0?	1?	0?	
+

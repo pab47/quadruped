@@ -1,0 +1,72 @@
+SD/FAST Information File: a1.sd
+Generated 06-Jan-2022 13:13:21 by SD/FAST, Kane's formulation
+(sdfast B.2.8 #30123) on machine ID unknown
+
+ROADMAP (a1.sd)
+
+Bodies        Inb
+No  Name      body Joint type  Coords q
+--- --------- ---- ----------- ----------------
+ -1 $ground                                    
+  0 trunk      -1  Sixdof        0   1   2 
+                   ...           3   4   5  18 
+  1 FR_hip      0  Pin           6             
+  2 FR_thigh    1  Pin           7             
+  3 FR_calf     2  Pin           8             
+  4 FL_hip      0  Pin           9             
+  5 FL_thigh    4  Pin          10             
+  6 FL_calf     5  Pin          11             
+  7 RR_hip      0  Pin          12             
+  8 RR_thigh    7  Pin          13             
+  9 RR_calf     8  Pin          14             
+ 10 RL_hip      0  Pin          15             
+ 11 RL_thigh   10  Pin          16             
+ 12 RL_calf    11  Pin          17             
+
+
+STATE INDEX TO JOINT/AXIS MAP (a1.sd)
+
+ Index
+  q|u   Joint  Axis   Joint type    Axis type    Joint Name
+ -----  -----  ----   -----------   ----------   ----------
+  0|19      0     0   Sixdof        translate    
+  1|20      .     1   .             translate 
+  2|21      .     2   .             translate 
+  3|22      .     3   .             quaternion
+  4|23      .     4   .             quaternion
+  5|24      .     5   .             quaternion
+  6|25      1     0   Pin           rotate       
+  7|26      2     0   Pin           rotate       
+  8|27      3     0   Pin           rotate       
+  9|28      4     0   Pin           rotate       
+ 10|29      5     0   Pin           rotate       
+ 11|30      6     0   Pin           rotate       
+ 12|31      7     0   Pin           rotate       
+ 13|32      8     0   Pin           rotate       
+ 14|33      9     0   Pin           rotate       
+ 15|34     10     0   Pin           rotate       
+ 16|35     11     0   Pin           rotate       
+ 17|36     12     0   Pin           rotate       
+ 18|        0     6   Sixdof        4th quat  
+   
+
+SYSTEM PARAMETERS (a1.sd)
+
+Parameter  Value  Description
+
+nbod          13  no. bodies (also, no. of tree joints)
+njnt          13  total number of joints (tree+loop)
+ndof          18  no. degrees of freedom allowed by tree joints
+nloop          0  no. loop joints
+nldof          0  no. degrees of freedom allowed by loop joints
+
+nq            19  no. position coordinates in state (tree joints)
+nu            18  no. rate coordinates in state (tree joints)
+nlq            0  no. position coordinates describing loop joints
+nlu            0  no. rate coordinates describing loop joints
+
+nc             0  total no. constraints defined
+nlc            0  no. loop joint constraints
+npresc         0  no. prescribed motion constraints
+nuserc         0  no. user constraints
+
