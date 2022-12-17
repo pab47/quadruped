@@ -1,6 +1,6 @@
 Nov 25, 2022
 
-This code has been tested on a mac using mujoco200.
+This code has been tested on a mac (intel chip) using mujoco200.
 
 Pre-reqs
 1) gsl libraries. Download gsl. cd to the gsl folder then type ./configure, make, sudo make install
@@ -8,8 +8,8 @@ Pre-reqs
 
 Running the code
 1. Navigate to bin
-2. chmod +x run_a1_trot19 (needs to be done only once)
-3. ./run_a1_trot19
+2. chmod +x run_a1_waypoint (needs to be done only once)
+3. ./run_a1_waypoint
 
 There are two different waypoint controllers
 1) constant yaw
