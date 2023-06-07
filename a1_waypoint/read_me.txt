@@ -1,4 +1,8 @@
 Nov 25, 2022
+Updated: June 7, 2023
+
+This code will enable tracking control of a quadruped similar to this video: https://youtu.be/o8qkcMmQTQI
+See this paper for more information: https://pab47.github.io/papers/2023Bhounsule_simple.pdf
 
 This code has been tested on a mac (intel chip) using mujoco200.
 
